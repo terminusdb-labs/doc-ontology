@@ -1,0 +1,90 @@
+[
+    { "@type" : "@context",
+      "@base" : "terminusdb:///documentation/data/",
+      "@schema" : "terminusdb:///documentation/schema#"
+    },
+    { "@type" : "Class",
+      "@id" : "Title",
+      "value" : "xsd:string"
+    },
+    { "@type" : "Class",
+      "@id" : "Introduction",
+      "value" : "xsd:string"
+    },
+    { "@type" : "Class",
+      "@id" : "Subtitle",
+      "value" : "xsd:string"
+    },
+    { "@type" : "Class",
+      "@id" : "Body",
+      "value" : "xsd:string"
+    },
+    { "@type" : "Enum",
+      "@id" : "MediaType",
+      "@value" : [
+          "Image",
+          "Video"
+      ]
+    },
+    { "@type" : "Class",
+      "@id" : "Media",
+      "title" : "Title",
+      "alt" : "xsd:string",
+      "caption" : "xsd:string",
+      "value" : "xsd:anyURI",
+      "media_type" : "MediaType"
+    },
+    { "@type" : "Class",
+      "@id" : "Page",
+      "@key": {
+          "@type": "Lexical",
+          "@fields": [
+              "slug"
+          ]
+      },
+      "slug" : "xsd:string",
+      "title" : "Title",
+      "media" : "Media",
+      "subtitle" : { "@type" : "Optional", "Subtitle"},
+      "introduction" : "Introduction",
+      "sections" : {"@type" : "Set", "@class" : "Sections"}
+    },
+    { "@type" : "Class",
+      "@id" : "Sections",
+      "title" : "Title",
+      "media" : "Media",
+      "introduction" : "Introduction",
+      "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
+      "subsections" : {"@type" : "Set", "@class" : "Subsections" }
+    },
+    { "@type" : "Class",
+      "@id" : "Subsections",
+      "title" : "Title",
+      "media" : "Media",
+      "introduction" : "Introduction",
+      "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
+      "subsubsections" : {"@type" : "Set", "@class" : "Subsubections" }
+    },
+    { "@type" : "Class",
+      "@id" : "Subsubsections",
+      "title" : "Title",
+      "media" : "Media",
+      "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
+      "body" : "Body"
+    },
+    { "@type" : "Class",
+      "@id" : "SiteMap",
+      "title" : "Title",
+      "tree" : "Tree" },
+    { "@type" : "Class",
+      "@id" : "Tree",
+      "title" : "Title",
+      "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
+      "link" : { "@type" : "Set", "@class" : "Page" },
+      "subtree" : { "@type" : "Set", "@class" : "Tree"}
+    },
+    { "@type" : "Class",
+      "@id" : "PageMap",
+      "title" : "Title",
+      "tree" : "Tree" }
+]
