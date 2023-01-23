@@ -12,10 +12,6 @@
         }
     },
     { "@type" : "Class",
-      "@id" : "Introduction",
-      "value" : "xsd:string"
-    },
-    { "@type" : "Class",
       "@id" : "Subtitle",
       "value" : "xsd:string",
       "@subdocument": [],
@@ -54,14 +50,14 @@
       "title" : "Title",
       "media" : "Media",
       "subtitle" : { "@type" : "Optional", "@class":"Subtitle"},
-      "introduction" : "Introduction",
+      "introduction" :{ "@type" : "Optional", "@class":"Body"},
       "sections" : {"@type" : "Set", "@class" : "Sections"}
     },
     { "@type" : "Class",
       "@id" : "Sections",
       "title" : "Title",
       "media" : "Media",
-      "introduction" : "Introduction",
+      "introduction" : { "@type" : "Optional", "@class":"Body"},
       "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
       "subsections" : {"@type" : "Set", "@class" : "Subsections" }
     },
@@ -69,7 +65,7 @@
       "@id" : "Subsections",
       "title" : "Title",
       "media" : "Media",
-      "introduction" : "Introduction",
+      "introduction" :{ "@type" : "Optional", "@class":"Body"},
       "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
       "subsubsections" : {"@type" : "Set", "@class" : "Subsubsections" }
     },
