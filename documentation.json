@@ -45,7 +45,7 @@
       "slug" : "xsd:string",
       "title" : "Title",
       "media" : "Media",
-      "subtitle" : { "@type" : "Optional", "Subtitle"},
+      "subtitle" : { "@type" : "Optional", "@class":"Subtitle"},
       "introduction" : "Introduction",
       "sections" : {"@type" : "Set", "@class" : "Sections"}
     },
