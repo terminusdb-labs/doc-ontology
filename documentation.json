@@ -5,7 +5,11 @@
     },
     { "@type" : "Class",
       "@id" : "Title",
-      "value" : "xsd:string"
+      "value" : "xsd:string",
+      "@subdocument": [],
+      "@key": {
+            "@type": "Random"
+        }
     },
     { "@type" : "Class",
       "@id" : "Introduction",
@@ -13,7 +17,11 @@
     },
     { "@type" : "Class",
       "@id" : "Subtitle",
-      "value" : "xsd:string"
+      "value" : "xsd:string",
+      "@subdocument": [],
+      "@key": {
+            "@type": "Random"
+        }
     },
     { "@type" : "Class",
       "@id" : "Body",
