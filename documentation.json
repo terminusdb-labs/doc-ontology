@@ -63,7 +63,7 @@
       "media" : "Media",
       "introduction" : "Introduction",
       "order" : { "@type" : "Optional", "@class" : "xsd:integer" },
-      "subsubsections" : {"@type" : "Set", "@class" : "Subsubections" }
+      "subsubsections" : {"@type" : "Set", "@class" : "Subsubsections" }
     },
     { "@type" : "Class",
       "@id" : "Subsubsections",
